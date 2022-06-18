@@ -18,7 +18,7 @@ class RoomDatabaseModule {
             UsersDatabase::class.java,
             "users.db"
         )
-            .allowMainThreadQueries()
+            //.allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .build()
     }
