@@ -2,7 +2,7 @@ package com.hogriders.daggerexample.di.module
 
 import android.content.Context
 import androidx.room.Room
-import com.hogriders.daggerexample.db.UsersDatabase
+import com.hogriders.daggerexample.data.storage.local.UsersDatabase
 import com.hogriders.daggerexample.di.qualifier.ApplicationContext
 import com.hogriders.daggerexample.di.scope.DaggerApplicationScope
 import dagger.Module

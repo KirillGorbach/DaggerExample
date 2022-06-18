@@ -1,10 +1,10 @@
-package com.hogriders.daggerexample.db.dao
+package com.hogriders.daggerexample.data.storage.local.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.hogriders.daggerexample.db.model.UserDB
+import com.hogriders.daggerexample.data.storage.local.model.UserDB
 import io.reactivex.rxjava3.core.Observable
 
 @Dao

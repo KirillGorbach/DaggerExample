@@ -1,6 +1,6 @@
 package com.hogriders.daggerexample.di.component
 
-import com.hogriders.daggerexample.db.UsersDatabase
+import com.hogriders.daggerexample.data.storage.local.UsersDatabase
 import com.hogriders.daggerexample.di.module.RoomDatabaseModule
 import com.hogriders.daggerexample.di.scope.DaggerApplicationScope
 import dagger.Component

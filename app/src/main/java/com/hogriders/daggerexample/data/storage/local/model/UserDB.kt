@@ -1,4 +1,4 @@
-package com.hogriders.daggerexample.db.model
+package com.hogriders.daggerexample.data.storage.local.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
