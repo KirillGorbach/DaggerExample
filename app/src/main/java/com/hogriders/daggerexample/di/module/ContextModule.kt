@@ -1,16 +1,14 @@
 package com.hogriders.daggerexample.di.module
 
 import android.content.Context
-import com.hogriders.daggerexample.di.qualifier.ApplicationContext
-import com.hogriders.daggerexample.di.scope.DaggerApplicationScope
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
+
 
 @Module
-class ContextModule (private val context: Context) {
-
-    @ApplicationContext
-    @DaggerApplicationScope
+class ContextModule(private val appContext: Context) {
     @Provides
-    fun context(): Context = context.applicationContext
+    @Singleton
+    fun providesContext(): Context = appContext
 }

@@ -14,7 +14,7 @@ interface UsersDao {
     fun getAllUsers(): Observable<List<UserDB>>
 
     @Query("SELECT * FROM User WHERE age >= :age ORDER BY age")
-    fun getOldPeopleBeers(age: Int): List<UserDB>
+    fun getOldPeopleBeers(age: Int): Observable<List<UserDB>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertUser(user: UserDB)
