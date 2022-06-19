@@ -4,6 +4,7 @@
     <bytecodeTargetLevel target="1.7">
       <module name="DaggerExample.app" target="11" />
       <module name="DaggerExample.data" target="11" />
+      <module name="DaggerExample.di" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

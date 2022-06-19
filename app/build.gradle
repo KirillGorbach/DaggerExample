@@ -21,6 +21,11 @@ android {
 
     }
 
+    buildFeatures {
+        // Enables Jetpack Compose for this module
+        compose true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -42,24 +47,35 @@ tasks.withType(Test){
 }
 dependencies {
 
+    implementation project(path: ':di')
     implementation project(path: ':domain')
     implementation project(path: ':data')
 
-    def dagger_version = "2.40"
-    implementation "com.google.dagger:dagger:$dagger_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    //Compose
+    // Integration with activities
+    implementation 'androidx.activity:activity-compose:1.4.0'
+    // Compose Material Design
+    implementation 'androidx.compose.material:material:1.1.1'
+    // Animations
+    implementation 'androidx.compose.animation:animation:1.1.1'
+    // Tooling support (Previews, etc.)
+    implementation 'androidx.compose.ui:ui-tooling:1.1.1'
+    // Integration with ViewModels
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1'
+    // UI Tests
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.1.1'
+    // When using a MDC theme
+    implementation "com.google.android.material:compose-theme-adapter:1.1.11"
+    // When using a AppCompat theme
+    implementation "com.google.accompanist:accompanist-appcompat-theme:0.16.0"
+    //Preview
+    debugImplementation "androidx.compose.ui:ui-tooling:1.1.1"
+    implementation "androidx.compose.ui:ui-tooling-preview:1.1.1"
 
     //rxJava3
     def rxJava3Ver = "3.0.0"
     implementation "io.reactivex.rxjava3:rxkotlin:$rxJava3Ver"
     implementation "io.reactivex.rxjava3:rxandroid:$rxJava3Ver"
-
-    //db
-    def roomVer = "2.4.2"
-    implementation "androidx.room:room-runtime:$roomVer"
-    implementation "androidx.room:room-rxjava3:$roomVer"
-    kapt "androidx.room:room-compiler:$roomVer"
-
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
